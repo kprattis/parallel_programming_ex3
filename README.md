@@ -1,1 +1,1 @@
-# parallel_programming_ex3
+# Parallel computation of FGLT with CUDA
