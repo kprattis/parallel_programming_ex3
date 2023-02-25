@@ -1,5 +1,5 @@
 CC = nvcc
-CCX = g++
+CXX = g++
 
 cpp_files = $(wildcard src/*.cpp lib/*.cpp)
 cu_files = $(wildcard src/*.cu lib/*.cu)
@@ -13,10 +13,6 @@ OUT_SEQ = build/fglt_seq.out
 all: $(OUT)
 
 SEQ: $(OUT_SEQ)
-
-CILK: $(cpp_files)
-	mkdir -p build
-	$(CXX) $^ $(FLAGS) -fopencilk -DSEQ -DCILK -o $(OUT_SEQ)
 
 DEBUG: $(cpp_files) $(cu_files)
 	mkdir -p build
