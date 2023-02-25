@@ -17,7 +17,6 @@ SEQ: $(OUT_SEQ)
 DEBUG: $(cpp_files) $(cu_files)
 	mkdir -p build
 	$(CC) $^ $(FLAGS) -DDEBUG -o $(OUT)
-	$(CXX) $^ $(FLAGS) -DSEQ -o $@
 
 $(OUT_SEQ): $(cpp_files)
 	mkdir -p build

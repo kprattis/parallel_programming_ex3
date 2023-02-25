@@ -1,0 +1,55 @@
+Initiating fast graphlet transform for '../assets/auto.mtx' using 0 threads.
+GPU-INIT, 0.051394
+DEVICE MEMORY ALLOCATION, 0.061892
+Calculations of p1, C3, 0.186212
+Calculations of p2, d3, d4, 0.189628
+Transfer dev_f -> f, 0.196387
+Calculation of net frequncies, 0.196584
+Transfer dev_f -> fn, 0.205981
+Free device memory, 0.206325
+Time to execute GPU kernel, 0.206331
+
+Initiating fast graphlet transform for '../assets/delaunay_n22.mtx' using 0 threads.
+GPU-INIT, 0.076576
+DEVICE MEMORY ALLOCATION, 0.115808
+Calculations of p1, C3, 0.139231
+Calculations of p2, d3, d4, 0.145805
+Transfer dev_f -> f, 0.193664
+Calculation of net frequncies, 0.195179
+Transfer dev_f -> fn, 0.272252
+Free device memory, 0.27287
+Time to execute GPU kernel, 0.272875
+
+Initiating fast graphlet transform for '../assets/great-britain_osm.mtx' using 0 threads.
+GPU-INIT, 0.056415
+DEVICE MEMORY ALLOCATION, 0.091388
+Calculations of p1, C3, 0.099368
+Calculations of p2, d3, d4, 0.104875
+Transfer dev_f -> f, 0.195096
+Calculation of net frequncies, 0.197857
+Transfer dev_f -> fn, 0.33224
+Free device memory, 0.332808
+Time to execute GPU kernel, 0.332815
+
+Initiating fast graphlet transform for '../assets/com-Youtube.mtx' using 0 threads.
+GPU-INIT, 0.056699
+DEVICE MEMORY ALLOCATION, 0.071216
+Calculations of p1, C3, 1.31839
+Calculations of p2, d3, d4, 1.32494
+Transfer dev_f -> f, 1.34074
+Calculation of net frequncies, 1.34117
+Transfer dev_f -> fn, 1.3605
+Free device memory, 1.36082
+Time to execute GPU kernel, 1.36083
+
+Initiating fast graphlet transform for '../assets/auto.mtx' using 1 threads.
+Total elapsed time: 1.0538 sec
+
+Initiating fast graphlet transform for '../assets/delaunay_n22.mtx' using 1 threads.
+Total elapsed time: 1.5757 sec
+
+Initiating fast graphlet transform for '../assets/great-britain_osm.mtx' using 1 threads.
+Total elapsed time: 0.9217 sec
+
+Initiating fast graphlet transform for '../assets/com-Youtube.mtx' using 1 threads.
+Total elapsed time: 10.1361 sec
