@@ -38,32 +38,64 @@ __global__ void C3_calc(double *C3_vals, mwIndex *ii, mwIndex *jStart, mwSize n,
         start_c = jStart[row];
         end_c = jStart[row + 1];
 
-        //find column
-        int j = start_c;
+        //binary range search find column
+        int element, start = start_c, end = end_c;
+        int mid = (start + end) / 2;
+
+        while (start + 1 < end)
+        {
+            element = jStart[ii[mid]];
+            if (id == element)
+            {
+                end = mid + 1;
+                start = mid;
+                break;
+            }
+            else if (id < element)
+            {
+                end = mid;
+            }
+            else
+            {
+                start = mid;
+            }
+    
+            mid = (start + end) / 2;
+        }
+
+        start_r = jStart[ii[start]];
+        end_r = jStart[ii[start] + 1];
+
+        /*
+        int j;
         for(j = start_c; j < end_c; j++){
             if(id < jStart[ii[j]]){
                 break;
             }
         }
-
+        
         start_r = jStart[ii[j - 1]];
         end_r = jStart[ii[j - 1] + 1];
-
+        */
 
         sum = 0;
         int k1 = start_r;
         int k2 = start_c;
 
-        //int id1, id2;
+        int id1, id2;
+
 
         while(k1 < end_r && k2 < end_c){
 
-            if(ii[k1] == ii[k2]){
+            id1 = ii[k1];
+            id2 = ii[k2];
+
+            if(id1 == id2){
                 sum ++;
                 k1++;
                 k2++;
             }
-            else if(ii[k1] > ii[k2]){
+            else if(id1 > id2){
                 k2++;
             }
             else{
