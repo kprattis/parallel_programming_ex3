@@ -39,3 +39,5 @@ or
 ``` 
 make test 
 ```
+
+Notice: Since the test is a small graph, GPU might appera slower than CPU execution. Please test with bigger graphs to sonfirm the speedup.
