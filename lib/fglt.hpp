@@ -1,12 +1,3 @@
-/*!
-  \file   fglt.hpp
-  \brief  Header file containing basic function definitinos for FGlT
-
-  \author Dimitris Floros
-  \date   2020-08-18
-*/
-
-
 #ifndef FGLT_H_
 #define FGLT_H_
 
