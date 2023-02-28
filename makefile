@@ -27,5 +27,12 @@ $(OUT): $(cpp_files) $(cu_files)
 	mkdir -p build
 	$(CC) $^ $(FLAGS) -o $@
 
+test: $(OUT) $(OUT_SEQ)
+	echo "Testing GPU version:"
+	./fglt_cuda.out assets/dictionary28.mtx
+
+	echo "Testing CPU sequential version"
+	./fglt_seq.out assets/dictionary28.mtx
+
 clean:
 	rm build/*.out
